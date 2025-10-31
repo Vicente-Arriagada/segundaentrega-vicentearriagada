@@ -1,0 +1,141 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import perifericos from '../../data/perifericos.json'; 
+
+export async function getStaticPaths() {
+  return perifericos.map(producto => {
+    return {
+      params: { id: producto.id },
+      props: { producto: producto }
+    };
+  });
+}
+
+const { producto }: { producto: any } = Astro.props;
+
+function formatearPrecio(precio:number) {
+  return new Intl.NumberFormat('es-CL', {
+    style: 'currency',
+    currency: 'CLP',
+    maximumFractionDigits: 0
+  }).format(precio);
+}
+
+function formatearBooleano(valor:boolean) {
+  if (valor === true) return "Sí";
+  if (valor === false) return "No";
+  if (valor === null) return "N/A";
+  return valor || "N/A";
+}
+---
+
+<Layout>
+    <main class="max-w-6xl mx-auto py-10 px-4">
+        
+        <a href="/perifericos" class="inline-block bg-white text-blue-600 font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-gray-50 mb-8">
+            <i class="fa-solid fa-arrow-left"></i> Volver a Periféricos
+        </a>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white rounded-lg shadow-lg overflow-hidden p-8">
+            
+            <div class="flex justify-center items-center p-4">
+                <img 
+                  src={producto.imagen_url} 
+                  alt={producto.nombre} 
+                  class="max-w-full max-h-[400px] object-contain"
+                />
+            </div>
+
+            <div>
+                <span class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full mb-3 inline-block">
+                    {producto.tipo}
+                </span>
+
+                <h1 class="text-3xl font-bold text-gray-900 mb-2">{producto.nombre}</h1>
+                <p class="text-4xl font-light text-gray-800 mb-6">{formatearPrecio(producto.precio)}</p>
+
+                {producto.tipo === 'Mouse' && (
+                  <>
+                    <div class="mb-6">
+                        <h2 class="text-xl font-semibold text-gray-800 border-b pb-2 mb-4">Características</h2>
+                        <div class="space-y-2 text-gray-700">
+                            <p><strong>Marca:</strong> {producto.especificaciones.marca}</p>
+                            <p><strong>Tracking:</strong> {producto.especificaciones.tracking}</p>
+                            <p><strong>Cantidad de botones:</strong> {producto.especificaciones.cantidad_botones}</p>
+                            <p><strong>DPI máximo:</strong> {producto.especificaciones.dpi_maximo.toLocaleString('es-CL')}</p>
+                            <p><strong>Cableado:</strong> {producto.especificaciones.cableado}</p>
+                            <p><strong>Peso:</strong> {producto.especificaciones.peso}</p>
+                            <p><strong>Tamaño:</strong> {producto.especificaciones.tamano}</p>
+                            <p><strong>DPI ajustable:</strong> {formatearBooleano(producto.especificaciones.dpi_ajustable)}</p>
+                            <p><strong>Color:</strong> {producto.especificaciones.color}</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h2 class="text-xl font-semibold text-gray-800 border-b pb-2 mb-4">Avanzados</h2>
+                        <div class="space-y-2 text-gray-700">
+                            <p><strong>Polling rate:</strong> {producto.avanzados.polling_rate}</p>
+                            <p><strong>Peso ajustable:</strong> {formatearBooleano(producto.avanzados.peso_ajustable)}</p>
+                            <p><strong>Lateralidad:</strong> {producto.avanzados.lateralidad}</p>
+                            <p><strong>Tecnología:</strong> {producto.avanzados.tecnologia}</p>
+                            <p><strong>Iluminación:</strong> {formatearBooleano(producto.avanzados.iluminacion)}</p>
+                            <p><strong>Fuente de alimentación:</strong> {producto.avanzados.fuente_alimentacion}</p>
+                        </div>
+                    </div>
+                  </>
+                )}
+
+                {producto.tipo === 'Teclado' && (
+                  <div class="mb-6">
+                      <h2 class="text-xl font-semibold text-gray-800 border-b pb-2 mb-4">Características</h2>
+                      <div class="space-y-2 text-gray-700">
+                          <p><strong>Marca:</strong> {producto.especificaciones.marca}</p>
+                          <p><strong>Tipo:</strong> {producto.especificaciones.tipo}</p>
+                          <p><strong>Formato:</strong> {producto.especificaciones.categoria}</p>
+                          <p><strong>Retroiluminación:</strong> {producto.especificaciones.retroiluminacion}</p>
+                          <p><strong>Tipo de switch:</strong> {producto.especificaciones.tipo_de_switch}</p>
+                          <p><strong>Cableado:</strong> {producto.especificaciones.cableado}</p>
+                          <p><strong>Conexión:</strong> {producto.especificaciones.tecnologia_conexion}</p>
+                          <p><strong>Teclas macro:</strong> {producto.especificaciones.teclas_macro}</p>
+                          <p><strong>Apoya muñecas:</strong> {formatearBooleano(producto.especificaciones.apoya_munecas)}</p>
+                          <p><strong>Teclas multimedia:</strong> {formatearBooleano(producto.especificaciones.teclas_multimedia)}</p>
+                      </div>
+                  </div>
+                )}
+
+                {producto.tipo === 'Monitor' && (
+                  <>
+                    <div class="mb-6">
+                        <h2 class="text-xl font-semibold text-gray-800 border-b pb-2 mb-4">Características</h2>
+                        <div class="space-y-2 text-gray-700">
+                            <p><strong>Tipo de Pantalla:</strong> {producto.especificaciones.tipo_pantalla}</p>
+                            <p><strong>Tamaño:</strong> {producto.especificaciones.tamano}</p>
+                            <p><strong>Resolución:</strong> {producto.especificaciones.resolucion}</p>
+                            <p><strong>Tasa de refresco:</strong> {producto.especificaciones.tasa_de_refresco}</p>
+                            <p><strong>Tiempo de respuesta:</strong> {producto.especificaciones.tiempo_de_respuesta}</p>
+                            <p><strong>Curvatura:</strong> {formatearBooleano(producto.especificaciones.curvatura)}</p>
+                            <p><strong>Soporta FreeSync:</strong> {formatearBooleano(producto.especificaciones.soporta_freesync)}</p>
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <h2 class="text-xl font-semibold text-gray-800 border-b pb-2 mb-4">Especificaciones Secundarias</h2>
+                        <div class="space-y-2 text-gray-700">
+                            <p><strong>Contraste:</strong> {producto.especificaciones_secundarias.contraste}</p>
+                            <p><strong>Brillo:</strong> {producto.especificaciones_secundarias.brillo}</p>
+                            <p><strong>Puertos USB:</strong> {formatearBooleano(producto.especificaciones_secundarias.puertos_usb)}</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h2 class="text-xl font-semibold text-gray-800 border-b pb-2 mb-4">Otros</h2>
+                        <div class="space-y-2 text-gray-700">
+                            <p><strong>Tipo de panel:</strong> {producto.otros.tipo_de_panel}</p>
+                            <p><strong>Parlantes:</strong> {formatearBooleano(producto.otros.parlantes)}</p>
+                            <p><strong>Puertos de video:</strong> {producto.otros.puertos_de_video}</p>
+                        </div>
+                    </div>
+                  </>
+                )}
+
+            </div>
+        </div>
+    </main>
+</Layout>

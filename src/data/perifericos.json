@@ -1,0 +1,151 @@
+[
+  {
+    "id": "logitech-pro-x-superlight-black",
+    "nombre": "Logitech Pro X Superlight - Black (910-005878)",
+    "precio": 119990,
+    "imagen_url": "/image/periferico1.webp",
+    "categoria": "perifericos",
+    "tipo": "Mouse",
+    "especificaciones": {
+      "marca": "Logitech",
+      "tracking": "Logitech Hero [Óptico]",
+      "cantidad_botones": 5,
+      "dpi_maximo": 25600,
+      "cableado": "Inalámbrico",
+      "peso": "63 g",
+      "tamano": "125 x 40 x 64 mm",
+      "dpi_ajustable": true,
+      "color": "Negro"
+    },
+    "avanzados": {
+      "polling_rate": "1000 Hz",
+      "peso_ajustable": false,
+      "lateralidad": "Diestro",
+      "tecnologia": "USB",
+      "iluminacion": false,
+      "fuente_alimentacion": "Batería"
+    }
+  },
+  {
+    "id": "logitech-g502-lightspeed",
+    "nombre": "Logitech G502 Lightspeed (910-005566 / 910-005565)",
+    "precio": 99990,
+    "imagen_url": "/image/periferico2.png",
+    "categoria": "perifericos",
+    "tipo": "Mouse",
+    "especificaciones": {
+      "marca": "Logitech",
+      "tracking": "Logitech Hero [Óptico]",
+      "cantidad_botones": 11,
+      "dpi_maximo": 16000,
+      "cableado": "Inalámbrico",
+      "peso": "114 g",
+      "tamano": "132 x 40 x 75 mm",
+      "dpi_ajustable": true,
+      "color": "Negro"
+    },
+    "avanzados": {
+      "polling_rate": "1000 Hz",
+      "peso_ajustable": true,
+      "lateralidad": "Diestro",
+      "tecnologia": "USB",
+      "iluminacion": "LED Programable",
+      "fuente_alimentacion": "Batería"
+    }
+  },
+  {
+    "id": "redragon-kumara-k552-rainbow-red",
+    "nombre": "Redragon Kumara K552 Rainbow (Español) (Negro - Switch Red)",
+    "precio": 34990,
+    "imagen_url": "/image/periferico3.png",
+    "categoria": "perifericos",
+    "tipo": "Teclado",
+    "especificaciones": {
+      "marca": "Redragon",
+      "tipo": "Mecánico",
+      "categoria": "80% (Tenkeyless)",
+      "retroiluminacion": "RGB (Colores Predelinidos)",
+      "tipo_de_switch": "Redragon Red",
+      "cableado": "Alámbrico",
+      "tecnologia_conexion": "USB 2.0",
+      "teclas_macro": 0,
+      "apoya_munecas": false,
+      "teclas_multimedia": true
+    }
+  },
+  {
+    "id": "razer-huntsman-v3-x-tkl-purple",
+    "nombre": "Razer Huntsman V3 X Tenkeyless - Purple Switch (RZ03-05021700-R311)",
+    "precio": 99990,
+    "imagen_url": "/image/periferico4.png",
+    "categoria": "perifericos",
+    "tipo": "Teclado",
+    "especificaciones": {
+      "marca": "Razer",
+      "part_number": "RZ03-05021700-R311",
+      "tipo": "Mecánico",
+      "categoria": "80% (Tenkeyless)",
+      "retroiluminacion": "RGB (Programable por Software)",
+      "tipo_de_switch": "Razer Clicky Optical Switch",
+      "cableado": "Alámbrico",
+      "tecnologia_conexion": "USB 2.0",
+      "teclas_macro": 0,
+      "apoya_munecas": false,
+      "teclas_multimedia": true
+    }
+  },
+  {
+    "id": "samsung-odyssey-g3-ls24dg300elxzs",
+    "nombre": "Samsung Odyssey G3 [LS24DG300ELXZS]",
+    "precio": 179990,
+    "imagen_url": "/image/periferico5.png",
+    "categoria": "perifericos",
+    "tipo": "Monitor",
+    "especificaciones": {
+      "tipo_pantalla": "LED",
+      "tamano": "24.0\"",
+      "resolucion": "Full HD (1920x1080)",
+      "tasa_de_refresco": "180 Hz",
+      "tiempo_de_respuesta": "1 ms (MPRT)",
+      "curvatura": false,
+      "soporta_freesync": true
+    },
+    "especificaciones_secundarias": {
+      "contraste": "3000:1",
+      "brillo": "250 cd/m²",
+      "puertos_usb": false
+    },
+    "otros": {
+      "tipo_de_panel": "VA",
+      "parlantes": false,
+      "puertos_de_video": "1x DisplayPort, 1x HDMI"
+    }
+  },
+  {
+    "id": "xiaomi-g27qi-p27qca-rggl",
+    "nombre": "Xiaomi G27Qi [P27QCA-RGGL / 57457]",
+    "precio": 249990,
+    "imagen_url": "/image/periferico6.png",
+    "categoria": "perifericos",
+    "tipo": "Monitor",
+    "especificaciones": {
+      "tipo_pantalla": "LED",
+      "tamano": "27.0\"",
+      "resolucion": "Quad HD (2560x1440)",
+      "tasa_de_refresco": "180 Hz",
+      "tiempo_de_respuesta": "1 ms (GTG)",
+      "curvatura": false,
+      "soporta_freesync": true
+    },
+    "especificaciones_secundarias": {
+      "contraste": "1000:1",
+      "brillo": "300 cd/m²",
+      "puertos_usb": false
+    },
+    "otros": {
+      "tipo_de_panel": "IPS",
+      "parlantes": false,
+      "puertos_de_video": "2x DisplayPort 1.4, 2x HDMI 2.0"
+    }
+  }
+]

@@ -1,0 +1,59 @@
+---
+const brand = {
+  name: "ALLINONE",
+  description: "Encuentra lo mejor en un solo lugar.",
+  color: "text-green-600"
+};
+
+const navLinks = [
+  { name: "Celulares", href: "/celulares" },
+  { name: "Hardware", href: "/hardware" },
+  { name: "Periféricos", href: "/perifericos" },
+  { name: "Notebook", href: "/notebook" },
+];
+
+const infoLinks = [
+  { name: "Sobre Nosotros", href: "/nosotros" },
+  { name: "Contacto", href: "/contacto" },
+];
+
+const year = new Date().getFullYear();
+---
+
+<footer class="bg-gray-900 text-gray-300 mt-8">
+  <div class="container mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-8 text-gray-700">
+    
+    <!-- Logo / Marca -->
+    <div>
+      <h2 class={`text-2xl font-bold ${brand.color}`}>{brand.name}</h2>
+      <p class="mt-2 text-sm text-white">{brand.description}</p>
+    </div>
+
+    <!-- Navegación -->
+    <div>
+      <h3 class="font-semibold mb-3 text-white">Navega</h3>
+      <ul class="space-y-2">
+        {navLinks.map(link => (
+          <li>
+            <a href={link.href} class="text-gray-300 hover:text-white">{link.name}</a>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <!-- Información -->
+    <div>
+      <h3 class="font-semibold mb-3 text-white">Información</h3>
+      <ul class="space-y-2">
+        {infoLinks.map(link => (
+          <li>
+            <a href={link.href} class="text-gray-300 hover:text-white">{link.name}</a>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+  </div>
+
+  
+</footer>

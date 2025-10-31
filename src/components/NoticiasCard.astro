@@ -1,0 +1,52 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  imageUrl?: string;
+  link: string;
+  category: string;
+}
+
+const { title, description, imageUrl, link, category } = Astro.props;
+---
+
+<a 
+  href={link} 
+  target="_blank" 
+  rel="noopener noreferrer" 
+  class="flex flex-col h-full bg-white rounded-lg shadow-lg overflow-hidden 
+         transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 group"
+>
+  {imageUrl && (
+    <div class="relative w-full h-48 overflow-hidden">
+      <img 
+        src={imageUrl} 
+        alt={title} 
+        class="absolute inset-0 w-full h-full object-cover 
+               transition-transform duration-300 group-hover:scale-105" 
+        loading="lazy"
+      />
+    </div>
+  )}
+  
+  <div class="p-6 flex flex-col flex-grow">
+    
+    <span class="text-blue-600 font-semibold text-xs uppercase mb-2">
+      {category}
+    </span>
+    
+    <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight transition-colors group-hover:text-blue-600">
+      {title}
+    </h3>
+    
+    <p class="text-gray-600 text-sm mb-4 flex-grow line-clamp-3">
+      {description}
+    </p>
+    
+    <div class="mt-auto">
+      <span class="text-blue-600 font-semibold text-sm">
+        Leer más --
+      </span>
+    </div>
+  </div>
+</a>

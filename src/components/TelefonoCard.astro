@@ -1,0 +1,41 @@
+---
+const { telefono } = Astro.props;
+
+// Funcion para formatear el precio y transformalo a clp
+function formatearPrecio(precio: number) {
+  return new Intl.NumberFormat('es-CL', {
+    style: 'currency',
+    currency: 'CLP',
+    maximumFractionDigits: 0
+  }).format(precio);
+}
+---
+
+<a href={`/telefonos/${telefono.id}`}><div class=" bg-white rounded-lg shadow-md overflow-hidden p-6 flex flex-col items-center text-center h-full transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+  <div class="w-full h-56 flex items-center justify-center mb-4">
+    <img 
+      src={telefono.imagen_url} 
+      alt={telefono.nombre} 
+      class="max-w-[150px] md:max-w-[200px] h-auto object-contain" 
+    />
+  </div>
+
+  {telefono.conectividad_celular === '5G' && (
+    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full mb-2">
+      5G
+    </span>
+  )}
+
+  <h2 class="text-xl font-semibold text-gray-800 mb-2">{telefono.nombre}</h2>
+
+  <p class="text-3xl font-bold text-gray-900 mb-6">{formatearPrecio(telefono.precio)}</p>
+
+  <div class="w-full text-left space-y-2 text-gray-700 text-sm">
+    <p><strong>Procesador:</strong> {telefono.caracteristicas_avanzadas.procesador || 'N/A'}</p>
+    <p><strong>Pantalla:</strong> {telefono.caracteristicas.pantalla || 'N/A'}</p>
+    <p><strong>Almacenamiento:</strong> {telefono.caracteristicas.memoria_interna || 'N/A'}</p>
+    <p><strong>Cámara:</strong> {telefono.caracteristicas.camara_principal || 'N/A'} trasera / {telefono.caracteristicas.camara_frontal || 'N/A'} frontal</p>
+    <p><strong>Sistema operativo:</strong> {telefono.caracteristicas.sistema_operativo || 'N/A'}</p>
+    <p><strong>Conectividad celular:</strong> {telefono.caracteristicas.conectividad_celular || 'N/A'}</p>
+  </div>
+</div></a>

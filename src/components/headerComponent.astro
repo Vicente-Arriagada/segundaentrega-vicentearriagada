@@ -1,0 +1,62 @@
+---
+const navLinks = [
+  { name: "Celulares", href: "/celulares" },
+  { name: "Hardware", href: "/hardware" },
+  { name: "Periféricos", href: "/perifericos" },
+  { name: "Notebook", href: "/notebook" },
+  { name: "Sobre Nosotros", href: "/nosotros" },
+  { name: "contacto", href: "/contacto" },
+  { name: "Blog", href: "/blog" },
+];
+---
+
+<header class="bg-cyan-400 shadow-md sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto flex justify-between items-center p-4"> 
+      <a href="/">
+  <img class="h-14 w-auto object-contain" src="/image/LOGOborde.png" alt="logo ALLINONE">
+  </a>
+      
+      <nav class="hidden xl:flex space-x-6">{navLinks.map(link => (
+  <a 
+            href={link.href} 
+            class="text-gray-700 hover:text-blue-600 transition-colors text-lg font-medium">
+  {link.name}
+  </a>
+  ))}
+</nav>
+
+    <button id="menu-toggle" class="xl:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    </div>
+
+  <div id="mobile-menu" class="hidden xl:hidden absolute top-full left-0 w-full bg-white shadow-lg border-t border-gray-200">
+    <nav class="flex flex-col p-4 space-y-2">
+      {navLinks.map(link => (
+        <a 
+          href={link.href} 
+          class="text-gray-700 hover:bg-gray-100 rounded-md p-3 text-lg font-medium"
+        >
+          {link.name}
+        </a>
+      ))}
+    </nav>
+  </div>
+</header>
+
+<script client:load > // Script para el menu hamburguesa
+  document.addEventListener('DOMContentLoaded', () => {
+   
+    const menuToggle = document.getElementById('menu-toggle');
+    
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (menuToggle && mobileMenu) {
+      
+      menuToggle.addEventListener('click', () => {
+        
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  });
+</script>

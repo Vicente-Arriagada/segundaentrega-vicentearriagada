@@ -1,0 +1,208 @@
+[
+  {
+    "id": "poco-x7-pro-256-black",
+    "nombre": "Xiaomi Poco X7 Pro (256 GB / 12 GB / Black)",
+    "precio": 429990,
+    "categoria": "telefonos",
+    "imagen_url": "/image/celular1.png",
+    "caracteristicas": {
+      "pantalla": "AMOLED 6.7\" táctil (2712x1220) / 120 Hz",
+      "memoria_interna": "256 GB",
+      "ram": "12 GB",
+      "camara_principal": "Estándar 50.0 MP + Gran angular 8.0 MP",
+      "camara_frontal": "Estándar 20.0 MP",
+      "bateria": "6000 mAh",
+      "sistema_operativo": "Android 15",
+      "conectividad_celular": "5G"
+    },
+    "caracteristicas_avanzadas": {
+      "procesador": "MediaTek Dimensity 8400 Ultra (3250 MHz)",
+      "cpu": "ARM Cortex A725 (Single + Triple core) + ARM Cortex A725 (Quad core)",
+      "gpu": "ARM Mali G720 MC7",
+      "peso": "195 g",
+      "tamano": "75 x 161 x 8 mm",
+      "soporte_esim": false
+    },
+    "conectividad_accesorios": {
+      "potencia_carga": "90.0 W",
+      "wifi": true,
+      "gps": true,
+      "nfc": true,
+      "bluetooth": true,
+      "lector_huellas_digitales": true,
+      "almacenamiento_externo": "No",
+      "conector_audifonos": false
+    }
+  },
+  {
+    "id": "samsung-s24-128-onyx",
+    "nombre": "Samsung Galaxy S24 (S921 / 128 GB / 8 GB / Onyx Black)",
+    "precio": 849990,
+    "categoria": "telefonos",
+    "imagen_url": "/image/celular2.png",
+    "caracteristicas": {
+      "pantalla": "Dynamic LTPO AMOLED 2X 6.2\" táctil (2340x1080) / 120 Hz",
+      "memoria_interna": "128 GB",
+      "ram": "8 GB",
+      "camara_principal": "Estándar 50.0 MP + Gran angular 12.0 MP + Teleobjetivo 10.0 MP",
+      "camara_frontal": "Estándar 12.0 MP",
+      "bateria": "4000 mAh",
+      "sistema_operativo": "Android 14",
+      "conectividad_celular": "5G"
+    },
+    "caracteristicas_avanzadas": {
+      "procesador": "Samsung Exynos 2400 (3200 MHz)",
+      "cpu": "ARM Cortex X4 + ARM Cortex A720 + ARM Cortex A520",
+      "gpu": "Samsung Xclipse 940",
+      "peso": "167 g",
+      "tamano": "71 x 147 x 8 mm",
+      "soporte_esim": true
+    },
+    "conectividad_accesorios": {
+      "potencia_carga": "25.0 W",
+      "wifi": true,
+      "gps": true,
+      "nfc": true,
+      "bluetooth": true,
+      "lector_huellas_digitales": true,
+      "almacenamiento_externo": "No"
+    }
+  },
+  {
+    "id": "moto-g85-256-blue",
+    "nombre": "Motorola Moto G85 (256 GB / 8 GB / Cobalt Blue) [PB290005CL]",
+    "precio": 299990,
+    "categoria": "telefonos",
+    "imagen_url": "/image/celular3.png",
+    "caracteristicas": {
+      "pantalla": "P-OLED 6.7\" táctil (2400x1080) / 120 Hz",
+      "memoria_interna": "256 GB",
+      "ram": "8 GB",
+      "camara_principal": "Estándar 50.0 MP + Gran angular 8.0 MP",
+      "camara_frontal": "Estándar 32.0 MP",
+      "bateria": "5000 mAh",
+      "sistema_operativo": "Android 14",
+      "conectividad_celular": "5G"
+    },
+    "caracteristicas_avanzadas": {
+      "procesador": "Qualcomm Snapdragon 6s Gen 3 (2300 MHz)",
+      "cpu": "ARM Cortex A78 (Dual core) + ARM Cortex A55 (Hexa core)",
+      "gpu": "Qualcomm Adreno 619",
+      "peso": "171 g",
+      "tamano": "73 x 162 x 8 mm",
+      "soporte_esim": true
+    },
+    "conectividad_accesorios": {
+      "potencia_carga": "30.0 W",
+      "almacenamiento_externo": "microSD",
+      "wifi": true,
+      "gps": true,
+      "nfc": true,
+      "bluetooth": true,
+      "lector_huellas_digitales": true,
+      "conector_audifonos": false
+    }
+  },
+  {
+    "id": "iphone-14-128-midnight",
+    "nombre": "Apple iPhone 14 (128 GB / Midnight)",
+    "precio": 699990,
+    "categoria": "telefonos",
+    "imagen_url": "/image/celular4.png",
+    "caracteristicas": {
+      "pantalla": "Super Retina XDR OLED 6.1\" táctil (2532x1170) / 60 Hz",
+      "memoria_interna": "128 GB",
+      "ram": "6 GB",
+      "camara_principal": "Estándar 12.0 MP + Gran angular 12.0 MP",
+      "camara_frontal": "Estándar 12.0 MP",
+      "bateria": null,
+      "sistema_operativo": "iOS 16",
+      "conectividad_celular": "5G"
+    },
+    "caracteristicas_avanzadas": {
+      "procesador": "Apple A15 Bionic (3223 MHz)",
+      "cpu": "Apple Avalanche (Dual core) + Apple Blizzard (Quad core)",
+      "gpu": null,
+      "peso": "172 g",
+      "tamano": "72 x 147 x 8 mm",
+      "soporte_esim": true
+    },
+    "conectividad_accesorios": {
+      "potencia_carga": "15.0 W",
+      "wifi": true,
+      "gps": true,
+      "nfc": true,
+      "bluetooth": true,
+      "lector_huellas_digitales": false,
+      "almacenamiento_externo": "No"
+    }
+  },
+  {
+    "id": "samsung-s24-ultra-256-titanium",
+    "nombre": "Samsung Galaxy S24 Ultra (S928 / 256 GB / 12 GB / Titanium Black)",
+    "precio": 1299990,
+    "categoria": "telefonos",
+    "imagen_url": "/image/celular5.png",
+    "caracteristicas": {
+      "pantalla": "Dynamic LTPO AMOLED 2X 6.8\" táctil (3088x1440) / 120 Hz",
+      "memoria_interna": "256 GB",
+      "ram": "12 GB",
+      "camara_principal": "Estándar 200.0 MP + Teleobjetivo Periscopio 50.0 MP + Gran angular 12.0 MP + Teleobjetivo 10.0 MP",
+      "camara_frontal": "Estándar 12.0 MP",
+      "bateria": "5000 mAh",
+      "sistema_operativo": "Android 14",
+      "conectividad_celular": "5G"
+    },
+    "caracteristicas_avanzadas": {
+      "procesador": "Qualcomm Snapdragon 8 Gen 3 (3390 MHz)",
+      "cpu": "ARM Cortex X4 (Single core) + ARM Cortex A720 (Triple core) + ARM Cortex A720 (Dual core)",
+      "gpu": "Qualcomm Adreno 750",
+      "peso": "232 g",
+      "tamano": "79 x 162 x 9 mm",
+      "soporte_esim": true
+    },
+    "conectividad_accesorios": {
+      "potencia_carga": "45.0 W",
+      "wifi": true,
+      "gps": true,
+      "nfc": true,
+      "bluetooth": true,
+      "lector_huellas_digitales": true,
+      "almacenamiento_externo": "No"
+    }
+  },
+  {
+    "id": "xiaomi-14t-512-titanium",
+    "nombre": "Xiaomi 14T (512 GB / 12 GB / Titanium Black)",
+    "precio": 799990,
+    "categoria": "telefonos",
+    "imagen_url": "/image/celular6.png",
+    "caracteristicas": {
+      "pantalla": "AMOLED 6.7\" táctil (2712x1220) / 144 Hz",
+      "memoria_interna": "512 GB",
+      "ram": "12 GB",
+      "camara_principal": "Estándar 50.0 MP + Teleobjetivo 50.0 MP + Gran angular 12.0 MP",
+      "camara_frontal": "Gran angular 32.0 MP",
+      "bateria": "5000 mAh",
+      "sistema_operativo": "Android 14",
+      "conectividad_celular": "5G"
+    },
+    "caracteristicas_avanzadas": {
+      "procesador": "MediaTek Dimensity 9300 Ultra (3350 MHz)",
+      "cpu": "ARM Cortex X4 (Single + Triple core) + ARM Cortex A510 (Quad core)",
+      "gpu": "ARM Mali G615 MC6",
+      "peso": "195 g",
+      "tamano": "75 x 161 x 8 mm",
+      "soporte_esim": true
+    },
+    "conectividad_accesorios": {
+      "potencia_carga": "67.0 W",
+      "wifi": true,
+      "gps": true,
+      "nfc": true,
+      "bluetooth": true,
+      "lector_huellas_digitales": true,
+      "almacenamiento_externo": "No"
+    }
+  }
+]

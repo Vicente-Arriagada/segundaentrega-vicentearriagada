@@ -1,0 +1,65 @@
+---
+const { producto } = Astro.props;
+
+// Funcion para formatear el precio y transformalo a clp
+function formatearPrecio(precio:number) {
+  return new Intl.NumberFormat('es-CL', {
+    style: 'currency',
+    currency: 'CLP',
+    maximumFractionDigits: 0
+  }).format(precio);
+}
+
+//Funcion para obtener una breve descripcion de las especificaciones del producto
+function getSpecResumen(prod:any) {
+  switch (prod.categoria) {
+    case 'telefonos':
+      return prod.caracteristicas.procesador;
+    case 'notebooks':
+      return prod.caracteristicas.tarjetas_de_video.split(' +')[0]; 
+    case 'hardware':
+      if (prod.tipo === 'GPU') return prod.especificaciones.gpu;
+      if (prod.tipo === 'CPU') return `${prod.especificaciones.nucleos_hilos}`;
+      if (prod.tipo === 'RAM') return `${prod.especificaciones.capacidad} ${prod.especificaciones.velocidad}`;
+      break;
+    case 'perifericos':
+      if (prod.tipo === 'Mouse') return prod.especificaciones.tracking;
+      if (prod.tipo === 'Teclado') return `${prod.especificaciones.tipo} / ${prod.especificaciones.tipo_de_switch}`;
+      if (prod.tipo === 'Monitor') return `${prod.especificaciones.resolucion} / ${prod.especificaciones.tasa_de_refresco}`;
+      break;
+  }
+  return 'Especificación no disponible'; 
+}
+
+const specResumen = getSpecResumen(producto);
+---
+
+<a 
+  href={`/${producto.categoria}/${producto.id}`} 
+  class="group relative block h-full bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl"
+>
+  <span class="absolute top-2 left-2 z-10 bg-blue-700 text-white text-xs font-bold px-3 py-1 rounded-full">
+    Lo más visto
+  </span>
+
+  <div class="w-full h-48 flex items-center justify-center p-4 bg-gray-50 overflow-hidden">
+    <img 
+      src={producto.imagen_url} 
+      alt={producto.nombre} 
+      class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
+    />
+  </div>
+
+  <div class="p-4 flex flex-col" style="height: calc(100% - 12rem);"> <h3 class="text-base font-semibold text-gray-800 mb-2 h-12 overflow-hidden">
+      {producto.nombre}
+    </h3>
+    
+    <p class="text-sm text-gray-600 mb-2 h-10 overflow-hidden">
+      {specResumen}
+    </p>
+    
+    <p class="text-2xl font-bold text-gray-900 mt-auto">
+      {formatearPrecio(producto.precio)}
+    </p>
+  </div>
+</a>

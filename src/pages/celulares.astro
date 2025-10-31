@@ -1,0 +1,18 @@
+---
+import telefonos from '../data/telefonos.json';
+import Layout from '../layouts/Layout.astro';
+import TelefonoCard from '../components/TelefonoCard.astro';
+---
+<Layout>
+    <main class="max-w-7xl mx-auto py-8 px-4">
+        <h1 class="text-4xl font-extrabold text-gray-900 mb-10 text-center">Catálogo de Teléfonos</h1>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {
+                telefonos.map(telefono => (
+                    <TelefonoCard telefono={telefono} />
+                ))
+            }
+        </div>
+    </main>
+</Layout>

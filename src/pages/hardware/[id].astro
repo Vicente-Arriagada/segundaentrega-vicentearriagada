@@ -1,0 +1,162 @@
+---
+import hardware from '../../data/hardware.json'; 
+import Layout from '../../layouts/Layout.astro';
+
+
+export async function getStaticPaths() {
+  return hardware.map(producto => {
+    return {
+      params: { id: producto.id }, // La URL 
+      props: { producto: producto } // Los datos que obtiene de hardware.json
+    };
+  });
+}
+
+
+const { producto } = Astro.props;
+const specs = producto.especificaciones;
+
+// Funcion para formatear el precio y transformalo a clp
+
+function formatearPrecio(precio: number) {
+  return new Intl.NumberFormat('es-CL', {
+    style: 'currency',
+    currency: 'CLP',
+    maximumFractionDigits: 0
+  }).format(precio);
+}
+
+function formatearBooleano(valor: any) {
+  // Si es el booleano 'true' O el texto "Sí"
+  if (valor === true || valor === "Sí") {
+    return "Sí";
+  }
+  
+  // Si es el booleano 'false' O el texto "No"
+  if (valor === false || valor === "No") {
+    return "No";
+  }
+
+  // Si no tiene valor (es null o undefined)
+  if (valor === null || typeof valor === 'undefined') {
+    return "N/A";
+  }
+
+  // Si es cualquier otro texto devuelve el valor original,
+  return valor;
+}
+
+---
+<Layout>
+    <main class="max-w-6xl mx-auto py-10 px-4">
+        
+        <a href="/" class="inline-block bg-white text-blue-600 font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-gray-50 mb-8">
+            <i class="fa-solid fa-arrow-left"></i> Volver al catálogo
+        </a>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white rounded-lg shadow-lg overflow-hidden p-8">
+            
+            <div class="flex justify-center items-center p-4">
+                <img 
+                  src={producto.imagen_url} 
+                  alt={producto.nombre} 
+                  class="max-w-full max-h-[400px] object-contain"
+                />
+            </div>
+
+            <div>
+                <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full mb-3 inline-block">
+                    {producto.tipo}
+                </span>
+
+                <h1 class="text-3xl font-bold text-gray-900 mb-2">{producto.nombre}</h1>
+                <p class="text-4xl font-light text-gray-800 mb-6">{formatearPrecio(producto.precio)}</p>
+
+                {producto.tipo === 'GPU' && (
+                  <>
+                    <div class="mb-6">
+                        <h2 class="text-xl font-semibold text-gray-800 border-b pb-2 mb-4">Características Principales</h2>
+                        <div class="space-y-2 text-gray-700">
+                            <p><strong>Fabricante:</strong> {specs.fabricante}</p>
+                            <p><strong>GPU:</strong> {specs.gpu}</p>
+                            <p><strong>Memoria:</strong> {specs.memoria}</p>
+                            <p><strong>Bus:</strong> {specs.bus}</p>
+                            <p><strong>Frecuencias Core:</strong> {specs.frecuencias_core}</p>
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <h2 class="text-xl font-semibold text-gray-800 border-b pb-2 mb-4">Especificaciones Secundarias</h2>
+                        <div class="space-y-2 text-gray-700">
+                            <p><strong>Núcleo:</strong> {specs.nucleo}</p>
+                            <p><strong>Refrigeración:</strong> {specs.refrigeracion}</p>
+                            <p><strong>Largo:</strong> {specs.largo}</p>
+                            <p><strong>Slots:</strong> {specs.slots}</p>
+                            <p><strong>Iluminación:</strong> {formatearBooleano(specs.iluminacion)}</p>
+                            <p><strong>Backplate:</strong> {formatearBooleano(specs.backplate)}</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h2 class="text-xl font-semibold text-gray-800 border-b pb-2 mb-4">Conectividad</h2>
+                        <div class="space-y-2 text-gray-700">
+                            <p><strong>Conectores de poder:</strong> {specs.conectores_de_poder}</p>
+                            <p><strong>Puertos de video:</strong> {specs.puertos_de_video}</p>
+                        </div>
+                    </div>
+                  </>
+                )}
+
+                {producto.tipo === 'CPU' && (
+                  <>
+                    <div class="mb-6">
+                        <h2 class="text-xl font-semibold text-gray-800 border-b pb-2 mb-4">Características</h2>
+                        <div class="space-y-2 text-gray-700">
+                            <p><strong>Frecuencia:</strong> {specs.frecuencia}</p>
+                            <p><strong>Frecuencia turbo máxima:</strong> {specs.frecuencia_turbo_maxima}</p>
+                            <p><strong>Núcleos / hilos:</strong> {specs.nucleos_hilos}</p>
+                            <p><strong>Cache:</strong> {specs.cache}</p>
+                            <p><strong>Socket:</strong> {specs.socket}</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h2 class="text-xl font-semibold text-gray-800 border-b pb-2 mb-4">Especificaciones Secundarias</h2>
+                        <div class="space-y-2 text-gray-700">
+                            <p><strong>Núcleo:</strong> {specs.nucleo}</p>
+                            <p><strong>Proceso de manufactura:</strong> {specs.proceso_de_manufactura}</p>
+                            <p><strong>TDP:</strong> {specs.tdp}</p>
+                            <p><strong>Cooler:</strong> {specs.cooler}</p>
+                            <p><strong>Gráficos integrados:</strong> {specs.graficos_integrados}</p>
+                        </div>
+                    </div>
+                  </>
+                )}
+
+                {producto.tipo === 'RAM' && (
+                  <>
+                    <div class="mb-6">
+                        <h2 class="text-xl font-semibold text-gray-800 border-b pb-2 mb-4">Características</h2>
+                        <div class="space-y-2 text-gray-700">
+                            <p><strong>Capacidad:</strong> {specs.capacidad}</p>
+                            <p><strong>Tipo:</strong> {specs.tipo}</p>
+                            <p><strong>Velocidad:</strong> {specs.velocidad}</p>
+                            <p><strong>Formato:</strong> {specs.formato}</p>
+                            <p><strong>Voltaje:</strong> {specs.voltaje}</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h2 class="text-xl font-semibold text-gray-800 border-b pb-2 mb-4">Latencias</h2>
+                        <div class="space-y-2 text-gray-700">
+                            <p><strong>Latencia CL (CAS):</strong> {specs.latencia_cl}</p>
+                            <p><strong>Latencia Trcd:</strong> {specs.latencia_trcd}</p>
+                            <p><strong>Latencia Trp:</strong> {specs.latencia_trp}</p>
+                            <p><strong>Latencia Tras:</strong> {specs.latencia_tras}</p>
+                            <p><strong>Soporte ECC:</strong> {formatearBooleano(specs.soporte_ecc)}</p>
+                            <p><strong>Soporte full buffered:</strong> {formatearBooleano(specs.soporte_full_buffered)}</p>
+                        </div>
+                    </div>
+                  </>
+                )}
+
+            </div>
+        </div>
+    </main>
+</Layout>

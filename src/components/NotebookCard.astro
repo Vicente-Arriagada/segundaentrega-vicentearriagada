@@ -1,0 +1,41 @@
+---
+const { producto } = Astro.props;
+
+// Funcion para formatear el precio y transformalo a clp
+
+function formatearPrecio(precio: number) {
+  return new Intl.NumberFormat('es-CL', {
+    style: 'currency',
+    currency: 'CLP',
+    maximumFractionDigits: 0
+  }).format(precio);
+}
+---
+
+<a 
+  href={`/${producto.categoria}/${producto.id}`} 
+  class=" bg-white rounded-lg shadow-md overflow-hidden p-6 flex flex-col items-center text-center h-full transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+>
+  
+  <div class="w-full h-56 flex items-center justify-center mb-4">
+    <img 
+      src={producto.imagen_url} 
+      alt={producto.nombre} 
+      class="max-w-full max-h-full object-contain"
+    />
+  </div>
+
+  
+<h2 class="text-xl font-semibold text-gray-800 mb-2">{producto.nombre}</h2>
+
+  
+<p class="text-3xl font-bold text-gray-900 mb-6">{formatearPrecio(producto.precio)}</p>
+
+  
+<div class="w-full text-left space-y-2 text-gray-700 text-sm mt-auto">
+    <p><strong>Procesador:</strong> {producto.caracteristicas.procesador}</p>
+    <p><strong>RAM:</strong> {producto.caracteristicas.ram}</p>
+    <p><strong>Tarjeta de video:</strong> {producto.caracteristicas.tarjetas_de_video}</p>
+    <p><strong>Almacenamiento:</strong> {producto.caracteristicas.almacenamiento}</p>
+  </div>
+</a>

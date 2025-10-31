@@ -1,0 +1,101 @@
+---
+
+import telefonos from '../../data/telefonos.json'; 
+import Layout from '../../layouts/Layout.astro';
+
+
+export async function getStaticPaths() {
+  return telefonos.map(telefono => {
+    return {
+      params: { id: telefono.id },
+      props: { telefono: telefono }
+    };
+  });
+}
+
+
+// Astro.props.producto contiene los datos del producto
+// correspondiente a esta página específica.
+const { telefono }: { telefono: any } = Astro.props;
+
+
+function formatearPrecio(precio: number) {
+  return new Intl.NumberFormat('es-CL', {
+    style: 'currency',
+    currency: 'CLP',
+    maximumFractionDigits: 0
+  }).format(precio);
+}
+
+
+function formatearBooleano(valor: boolean) {
+  if (valor === true) return "Sí";
+  if (valor === false) return "No";
+  return valor || "N/A"; // Devuelve N/A si es null o undefined
+}
+
+---
+<Layout>
+
+    <main class="max-w-6xl mx-auto py-10 px-4">
+        
+        <a href="/" class="inline-block bg-white text-blue-600 font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-gray-50 mb-8">
+            <i class="fa-solid fa-arrow-left"></i> Volver al catálogo
+        </a>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white rounded-lg shadow-lg overflow-hidden p-8">
+            
+            <div class="flex justify-center items-center p-4">
+                <img 
+                  src={telefono.imagen_url} 
+                  alt={telefono.nombre} 
+                  class="max-w-full max-h-[400px] object-contain"
+                />
+            </div>
+
+            <div>
+                <h1 class="text-3xl font-bold text-gray-900 mb-2">{telefono.nombre}</h1>
+                <p class="text-4xl font-light text-gray-800 mb-6">{formatearPrecio(telefono.precio)}</p>
+
+                <div class="mb-6">
+                    <h2 class="text-xl font-semibold text-gray-800 border-b pb-2 mb-4">Características</h2>
+                    <div class="space-y-2 text-gray-700">
+                        <p><strong>Pantalla:</strong> {telefono.caracteristicas.pantalla}</p>
+                        <p><strong>Memoria interna:</strong> {telefono.caracteristicas.memoria_interna}</p>
+                        <p><strong>RAM:</strong> {telefono.caracteristicas.ram}</p>
+                        <p><strong>Cámara principal:</strong> {telefono.caracteristicas.camara_principal}</p>
+                        <p><strong>Cámara frontal:</strong> {telefono.caracteristicas.camara_frontal}</p>
+                        <p><strong>Batería:</strong> {telefono.caracteristicas.bateria || 'N/A'}</p>
+                        <p><strong>Sistema operativo:</strong> {telefono.caracteristicas.sistema_operativo}</p>
+                        <p><strong>Conectividad celular:</strong> {telefono.caracteristicas.conectividad_celular}</p>
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <h2 class="text-xl font-semibold text-gray-800 border-b pb-2 mb-4">Características Avanzadas</h2>
+                    <div class="space-y-2 text-gray-700">
+                        <p><strong>Procesador:</strong> {telefono.caracteristicas_avanzadas.procesador}</p>
+                        <p><strong>CPU:</strong> {telefono.caracteristicas_avanzadas.cpu || 'N/A'}</p>
+                        <p><strong>GPU:</strong> {telefono.caracteristicas_avanzadas.gpu || 'N/A'}</p>
+                        <p><strong>Peso:</strong> {telefono.caracteristicas_avanzadas.peso || 'N/A'}</p>
+                        <p><strong>Tamaño:</strong> {telefono.caracteristicas_avanzadas.tamano || 'N/A'}</p>
+                        <p><strong>Soporte eSIM:</strong> {formatearBooleano(telefono.caracteristicas_avanzadas.soporte_esim)}</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-semibold text-gray-800 border-b pb-2 mb-4">Conectividad y Accesorios</h2>
+                    <div class="space-y-2 text-gray-700">
+                        <p><strong>Potencia de carga:</strong> {telefono.conectividad_accesorios.potencia_carga || 'N/A'}</p>
+                        <p><strong>Wi-Fi:</strong> {formatearBooleano(telefono.conectividad_accesorios.wifi)}</p>
+                        <p><strong>GPS:</strong> {formatearBooleano(telefono.conectividad_accesorios.gps)}</p>
+                        <p><strong>NFC:</strong> {formatearBooleano(telefono.conectividad_accesorios.nfc)}</p>
+                        <p><strong>Bluetooth:</strong> {formatearBooleano(telefono.conectividad_accesorios.bluetooth)}</p>
+                        <p><strong>Lector de huellas:</strong> {formatearBooleano(telefono.conectividad_accesorios.lector_huellas_digitales)}</p>
+                        <p><strong>Almacenamiento externo:</strong> {formatearBooleano(telefono.conectividad_accesorios.almacenamiento_externo)}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+  </Layout>

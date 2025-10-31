@@ -1,0 +1,161 @@
+[
+  {
+    "id": "lenovo-legion-5-15ahp10-83m0000scl",
+    "nombre": "Lenovo Legion 5 15AHP10 [83M0000SCL]",
+    "precio": 1599990,
+    "imagen_url": "/image/pc1.png",
+    "categoria": "notebook",
+    "caracteristicas": {
+      "procesador": "AMD Ryzen 7 260 (3800 MHz - 5100 MHz)",
+      "ram": "24 GB DDR5 (4800 MHz)",
+      "pantalla": "OLED 15.1\" (2560x1600) / 165 Hz",
+      "almacenamiento": "SSD 1 TB",
+      "tarjetas_de_video": "NVIDIA GeForce RTX 5060 (8 GB) + AMD Radeon 780M (Integrada)"
+    },
+    "puertos": [
+      "1x HDMI 2.1",
+      "1x RJ45 (10 / 100 / 1000 Mbps)",
+      "1x USB 10Gbps Type-C (con señal HDMI / DisplayPort)",
+      "1x USB 40Gbps Type-C (con señal HDMI / DisplayPort)",
+      "3x USB 5Gbps Type-A"
+    ],
+    "especificaciones_secundarias": {
+      "peso": "1900 g.",
+      "dimensiones": "345 x 259 x 22 mm",
+      "sistema_operativo": "Microsoft Windows 11 Home",
+      "otros": "Wi-Fi 7 (802.11be), Adaptador de 245W, Teclado en Español."
+    }
+  },
+  {
+    "id": "acer-predator-helios-neo-16s-phn16s-71-98rf",
+    "nombre": "Acer Predator Helios Neo 16S AI PHN16S-71-98RF [NH.U0KAA.001]",
+    "precio": 2499990,
+    "imagen_url": "/image/pc2.png",
+    "categoria": "notebook",
+    "caracteristicas": {
+      "procesador": "Intel Core Ultra 9 275HX (2100 MHz - 5400 MHz)",
+      "ram": "32 GB DDR5 (6400 MHz)",
+      "pantalla": "OLED 16.0\" (2560x1600) / 240 Hz",
+      "almacenamiento": "SSD 1 TB",
+      "tarjetas_de_video": "NVIDIA GeForce RTX 5070 Ti (12 GB) + Intel Arc 4-Cores iGPU (Integrada)"
+    },
+    "puertos": [
+      "1x RJ45 (100 / 1000 / 2500 Mbps)",
+      "1x Thunderbolt 4 (con señal HDMI / DisplayPort)",
+      "2x USB 10Gbps Type-C",
+      "1x USB 10Gbps Type-A",
+      "1x USB 5Gbps Type-A"
+    ],
+    "especificaciones_secundarias": {
+      "peso": "2300 g.",
+      "dimensiones": "N/A",
+      "sistema_operativo": "Microsoft Windows 11 Home",
+      "otros": "Intel Killer Wi-Fi 6E, Adaptador 230W, Lector MicroSD."
+    }
+  },
+  {
+    "id": "lenovo-loq-15irx10-83ject01wwcl2",
+    "nombre": "Lenovo LOQ 15IRX10 [83JECT01WWCL2]",
+    "precio": 1249990,
+    "imagen_url": "/image/pc3.png",
+    "categoria": "notebook",
+    "caracteristicas": {
+      "procesador": "Intel Core i7-13650HX (3600 MHz - 4900 MHz)",
+      "ram": "32 GB DDR5 (4800 MHz)",
+      "pantalla": "LED 15.6\" (1920x1080) / 144 Hz",
+      "almacenamiento": "SSD 1 TB",
+      "tarjetas_de_video": "NVIDIA GeForce RTX 3050 (6 GB) + Intel UHD Graphics (Integrada)"
+    },
+    "puertos": [
+      "1x HDMI 2.1",
+      "1x RJ45 (10 / 100 / 1000 Mbps)",
+      "1x USB 10Gbps Type-C (con señal HDMI / DisplayPort)",
+      "3x USB 5Gbps Type-A"
+    ],
+    "especificaciones_secundarias": {
+      "peso": "2400 g.",
+      "dimensiones": "360 x 259 x 24 mm",
+      "sistema_operativo": "Microsoft Windows 11 Home",
+      "otros": "Wi-Fi 6 (802.11ax), Adaptador de 245W, Teclado en Español."
+    }
+  },
+  {
+    "id": "msi-thin-15-b13vf-2829us",
+    "nombre": "MSI Thin 15 B13VF-2829US",
+    "precio": 949990,
+    "imagen_url": "/image/pc4.png",
+    "categoria": "notebook",
+    "caracteristicas": {
+      "procesador": "Intel Core i5-13420H (1500 MHz - 4600 MHz)",
+      "ram": "16 GB DDR4 (3200 MHz)",
+      "pantalla": "LED 15.6\" (1920x1080) / 144 Hz",
+      "almacenamiento": "SSD 512 GB",
+      "tarjetas_de_video": "NVIDIA GeForce RTX 4060 (8 GB) + Intel UHD Graphics (Integrada)"
+    },
+    "puertos": [
+      "1x HDMI 2.1",
+      "1x RJ45 (10 / 100 / 1000 Mbps)",
+      "1x USB 2.0",
+      "2x USB 5Gbps Type-A",
+      "1x USB 5Gbps Type-C (con señal HDMI / DisplayPort)"
+    ],
+    "especificaciones_secundarias": {
+      "peso": "2250 g.",
+      "dimensiones": "359 x 259 x 25 mm",
+      "sistema_operativo": "Microsoft Windows 11 Home",
+      "otros": "Intel Wi-Fi 6 AX201, Adaptador 200W, Teclado en Inglés."
+    }
+  },
+  {
+    "id": "acer-nitro-v-15-anv15-42-r50c-1",
+    "nombre": "Acer Nitro V 15 ANV15-42-R50C-1 [NH.QUCAL.001]",
+    "precio": 1199990,
+    "imagen_url": "/image/pc5.png",
+    "categoria": "notebook",
+    "caracteristicas": {
+      "procesador": "AMD Ryzen 7 8845HS (3800 MHz - 5100 MHz)",
+      "ram": "16 GB DDR5 (5600 MHz)",
+      "pantalla": "LED 15.6\" (1920x1080) / 144 Hz",
+      "almacenamiento": "SSD 512 GB",
+      "tarjetas_de_video": "NVIDIA GeForce RTX 4050 (6 GB) + AMD Radeon 780M (Integrada)"
+    },
+    "puertos": [
+      "1x HDMI",
+      "1x RJ45 (100 / 1000 / 2500 Mbps)",
+      "3x USB 5Gbps Type-A",
+      "1x USB 5Gbps Type-C"
+    ],
+    "especificaciones_secundarias": {
+      "peso": "2100 g.",
+      "dimensiones": "362 x 240 x 24 mm",
+      "sistema_operativo": "Microsoft Windows 11 Home",
+      "otros": "Wi-Fi 6 (802.11ax), Teclado en Español."
+    }
+  },
+  {
+    "id": "lenovo-legion-7-16iax10-83ky0028cl",
+    "nombre": "Lenovo Legion 7 16IAX10 [83KY0028CL]",
+    "precio": 2799990,
+    "imagen_url": "/image/pc6.png",
+    "categoria": "notebook",
+    "caracteristicas": {
+      "procesador": "Intel Core Ultra 9 275HX (2100 MHz - 5400 MHz)",
+      "ram": "32 GB DDR5 (6400 MHz)",
+      "pantalla": "OLED 16.0\" (2560x1600) / 165 Hz",
+      "almacenamiento": "SSD 2 TB",
+      "tarjetas_de_video": "NVIDIA GeForce RTX 5070 (8 GB) + Intel Arc 4-Cores iGPU (Integrada)"
+    },
+    "puertos": [
+      "1x HDMI 2.1",
+      "1x Thunderbolt 4 (con señal HDMI / DisplayPort)",
+      "1x USB 10Gbps Type-C (con señal HDMI / DisplayPort)",
+      "2x USB 5Gbps Type-A"
+    ],
+    "especificaciones_secundarias": {
+      "peso": "2000 g.",
+      "dimensiones": "362 x 263 x 18 mm",
+      "sistema_operativo": "Microsoft Windows 11 Home",
+      "otros": "Wi-Fi 7 (802.11be), Adaptador de 245W, Teclado en Español."
+    }
+  }
+]

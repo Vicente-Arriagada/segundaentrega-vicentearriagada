@@ -1,0 +1,76 @@
+---
+
+const { producto } = Astro.props;
+
+// Funcion para formatear el precio y transformalo a clp
+
+function formatearPrecio(precio : number) {
+  return new Intl.NumberFormat('es-CL', {
+    style: 'currency',
+    currency: 'CLP',
+    maximumFractionDigits: 0
+  }).format(precio);
+}
+
+// Funcion para elegir qué mostrar en la tarjeta
+
+function getSpecsPrincipales(prod: any) {
+  switch (prod.tipo) {
+    case 'GPU':
+      return [
+        { label: 'Fabricante', valor: prod.especificaciones.fabricante },
+        { label: 'GPU', valor: prod.especificaciones.gpu },
+        { label: 'Memoria', valor: prod.especificaciones.memoria }
+      ];
+    case 'CPU':
+      return [
+        { label: 'Socket', valor: prod.especificaciones.socket },
+        { label: 'Núcleos/Hilos', valor: prod.especificaciones.nucleos_hilos },
+        { label: 'Frecuencia', valor: `${prod.especificaciones.frecuencia} MHz` }
+      ];
+    case 'RAM':
+      return [
+        { label: 'Capacidad', valor: prod.especificaciones.capacidad },
+        { label: 'Tipo', valor: prod.especificaciones.tipo },
+        { label: 'Velocidad', valor: prod.especificaciones.velocidad }
+      ];
+    default:
+      return [];
+  }
+}
+
+const specs = getSpecsPrincipales(producto);
+---
+
+<a 
+  href={`/${producto.categoria}/${producto.id}`} 
+  class=" bg-white rounded-lg shadow-md overflow-hidden p-6 flex flex-col items-center text-center h-full transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+>
+  
+  <div class="w-full h-56 flex items-center justify-center mb-4">
+    <img 
+      src={producto.imagen_url} 
+      alt={producto.nombre} 
+      class="max-w-full max-h-full object-contain"
+    />
+  </div>
+
+  
+<span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-0.5 rounded-full mb-2">
+    {producto.tipo}
+  </span>
+
+  
+<h2 class="text-xl font-semibold text-gray-800 mb-2">{producto.nombre}</h2>
+
+  
+<p class="text-3xl font-bold text-gray-900 mb-6">{formatearPrecio(producto.precio)}</p>
+
+  
+<div class="w-full text-left space-y-2 text-gray-700 text-sm mt-auto">
+    {specs.map(spec => (
+      <p><strong>{spec.label}:</strong> {spec.valor || 'N/A'}</p>
+    ))}
+  </div>
+</a>
+

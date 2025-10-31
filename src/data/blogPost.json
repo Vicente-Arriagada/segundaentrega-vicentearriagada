@@ -1,0 +1,50 @@
+[
+  {
+    "id": "arma-tu-pc-ideal",
+    "title": "Arma tu PC Ideal: Guía Completa por Gamas (Baja, Media y Alta)",
+    "description": "Una guía paso a paso para elegir los componentes perfectos según tu presupuesto y necesidades.",
+    "imageUrl": "/image/hq720.jpg",
+    "link": "/blogs/blog1",
+    "category": "Guía de Armado"
+  },
+  {
+    "id": "nvidia-vs-amd-2025",
+    "title": "Guerra de Titanes: NVIDIA vs. AMD - ¿Qué GPU es para Ti en 2025?",
+    "description": "Analizamos el rendimiento, tecnologías y precios para ayudarte a decidir qué marca dominará tu PC.",
+    "imageUrl": "/image/fuobkumfe7gd1.jpeg",
+    "link": "/blogs/blog2",
+    "category": "Comparativa"
+  },
+  {
+    "id": "intel-vs-amd-cpu",
+    "title": "La Batalla por el Trono: Intel Core i9 vs. AMD Ryzen 9",
+    "description": "Enfrentamos a los procesadores tope de gama para gaming y productividad. ¿Cuál es el rey?",
+    "imageUrl": "/image/AMD-Ryzen-5-Vs-Intel-Core-i5.jpg",
+    "link": "/blogs/blog3",
+    "category": "Comparativa"
+  },
+  {
+    "id": "setup-gamer-perfecto",
+    "title": "Más Allá de la Torre: Guía para Crear el Setup Gamer Perfecto",
+    "description": "Descubre cómo elegir el monitor, teclado, mouse y audio ideales para una experiencia inmersiva.",
+    "imageUrl": "/image/photo-1616588589676-62b3bd4ff6d2.jpeg",
+    "link": "/blogs/blog4",
+    "category": "Guía de Periféricos"
+  },
+  {
+    "id": "rtx-serie-50-rumores",
+    "title": "NVIDIA RTX Serie 50: Todo lo que Sabemos hasta Ahora",
+    "description": "Rumores, filtraciones y análisis de lo que nos espera con la arquitectura Blackwell de NVIDIA.",
+    "imageUrl": "/image/maxresdefault.jpg",
+    "link": "/blogs/blog5",
+    "category": "Noticias"
+  },
+  {
+    "id": "amd-rdna-4",
+    "title": "AMD Radeon RX 8000: ¿Qué nos trae la arquitectura RDNA 4?",
+    "description": "AMD planea revolucionar el mercado con su enfoque en la eficiencia y el rendimiento por vatio.",
+    "imageUrl": "/image/AMD-RADEON-8000-rx8000-RDNA-4.webp",
+    "link": "/blogs/blog6",
+    "category": "Noticias"
+  }
+]

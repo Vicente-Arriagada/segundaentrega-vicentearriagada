@@ -1,0 +1,83 @@
+---
+
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Sobre Nosotros">
+  <main>
+    <section class="bg-gray-900 py-20 text-white">
+      <div class="container mx-auto text-center px-4">
+        <h1 class="text-4xl md:text-5xl font-bold">
+          Apasionados por la <span class="text-green-500">Tecnología</span>
+        </h1>
+        <p class="mt-4 text-lg text-gray-300 max-w-3xl mx-auto">
+          Conoce la historia y la misión detrás de AllInOne, tu tienda de confianza para todo lo relacionado con el mundo digital.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-16 lg:py-24 bg-white">
+      <div class="container mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-center px-4">
+          
+          <div class="text-lg">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Nuestra Misión</h2>
+            <p class="text-gray-600 leading-relaxed mb-8">
+              En AllInOne, nuestra misión es simple: hacer que la mejor tecnología sea accesible para todos. Seleccionamos cuidadosamente cada producto, desde componentes de hardware de alto rendimiento y periféricos de última generación, hasta los celulares más innovadores y Notebook de la mas alta gamma. Queremos ser el único lugar que necesites para construir tu universo digital.
+            </p>
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Nuestra Historia</h2>
+            <p class="text-gray-600 leading-relaxed">
+              Nacimos de un grupo de entusiastas de la tecnología que pasaban horas buscando los componentes perfectos. Frustrados por la dificultad de encontrar todo en un solo lugar y con un servicio al cliente excepcional, decidimos crear AllInOne. Empezamos como una pequeña tienda y, gracias a la confianza de nuestra comunidad, hemos crecido hasta convertirnos en un referente para gamers, profesionales y amantes de la tecnología por igual.
+            </p>
+          </div>
+          
+          <div class="w-full h-80 lg:h-96 bg-gray-100 rounded-lg flex items-center justify-center p-8 order-first md:order-last">
+            <img 
+              src="/image/LOGOTEAM.png" 
+              alt="Logo del equipo AllInOne"
+              class="w-full h-full object-contain"
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-gray-50 py-16 lg:py-24">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Lo que nos Define</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <div class="bg-white p-8 rounded-lg shadow-lg text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+            <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <i class="fa-solid fa-award text-3xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Calidad Garantizada</h3>
+            <p class="text-gray-600">
+              Solo ofrecemos productos que usaríamos nosotros mismos. Cada artículo en nuestro catálogo ha pasado un riguroso proceso de selección.
+            </p>
+          </div>
+          
+          <div class="bg-white p-8 rounded-lg shadow-lg text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+            <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <i class="fa-solid fa-phone text-3xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Atención al Cliente</h3>
+            <p class="text-gray-600">
+              Somos expertos apasionados listos para ayudarte. Tu satisfacción es nuestra prioridad, desde la compra hasta el soporte post-venta.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-lg shadow-lg text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+            <div class="w-16 h-16 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <i class="fa-solid fa-hand-holding-heart text-3xl "></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Para la Comunidad</h3>
+            <p class="text-gray-600">
+              Creemos en construir una comunidad fuerte. Ofrecemos precios justos y compartimos nuestro conocimiento para que tomes las mejores decisiones.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

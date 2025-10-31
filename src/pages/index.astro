@@ -1,0 +1,43 @@
+---
+
+import Layout from '../layouts/Layout.astro';
+import ProductCarousel from '../components/ProductCarousel.astro'
+import telefonos from '../data/telefonos.json';
+import hardware from '../data/hardware.json';
+import notebooks from '../data/notebook.json';
+import perifericos from '../data/perifericos.json';
+import HomeComponent from '../components/HomeComponent.astro'
+
+const todosLosProductos = [
+  ...telefonos,
+  ...hardware,
+  ...notebooks,
+  ...perifericos
+];
+// Funcion para que eliga de manera aleatoria los productos destacados
+const productosDestacados = todosLosProductos.sort(() => 0.5 - Math.random()).slice(0, 8);
+---
+<Layout>
+	<main class="container mx-auto p-4">
+
+		
+		<HomeComponent />
+
+    
+
+    <ProductCarousel 
+      titulo="Lo más visto" 
+      productos={productosDestacados} 
+    />
+    
+    <ProductCarousel 
+      titulo="Nuevos Lanzamientos en Hardware" 
+      productos={hardware.slice(0, 8)} 
+    />
+
+    <ProductCarousel 
+      titulo="Ofertas en Teléfonos" 
+      productos={telefonos.slice(0, 8)} 
+    />
+	</main>
+</Layout>

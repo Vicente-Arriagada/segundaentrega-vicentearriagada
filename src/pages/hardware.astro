@@ -1,0 +1,20 @@
+---
+import hardware from '../data/hardware.json';
+import Layout from '../layouts/Layout.astro';
+import HardwareCard from '../components/HardwareCard.astro'; 
+---
+<Layout>
+    <main class="max-w-7xl mx-auto py-8 px-4">
+        
+
+        <h1 class="text-4xl font-extrabold text-gray-900 mb-10 text-center">Hardware</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16">
+            {
+                hardware.map(item => (
+                    <HardwareCard producto={item} />
+                ))
+            }
+        </div>
+
+        </main>
+</Layout>

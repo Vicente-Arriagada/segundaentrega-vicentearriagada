@@ -1,0 +1,132 @@
+[
+  {
+    "id": "pny-rtx-3060-12gb-xlr8",
+    "nombre": "PNY GeForce RTX 3060 12GB XLR8 Gaming REVEL EPIC-X RGB [VCG306012DFXPPB]",
+    "precio": 349990,
+    "imagen_url": "/image/componente1.png",
+    "categoria": "hardware",
+    "tipo": "GPU",
+    "especificaciones": {
+      "fabricante": "PNY",
+      "gpu": "NVIDIA GeForce RTX 3060",
+      "memoria": "12 GB GDDR6 (192 bit)",
+      "bus": "PCI Express 4.0 x16",
+      "frecuencias_core": "1320 / 1777 MHz",
+      "nucleo": "NVIDIA Ampere GA106",
+      "refrigeracion": "Ventilador",
+      "largo": "247 mm",
+      "slots": "Dual slot",
+      "iluminacion": "Sí (RGB)",
+      "backplate": "Sí",
+      "conectores_de_poder": "1x 8 pines",
+      "puertos_de_video": "3x DisplayPort 1.4a, 1x HDMI 2.1"
+    }
+  },
+  {
+    "id": "asus-prime-rtx-5060-oc-8gb",
+    "nombre": "ASUS PRIME GeForce RTX 5060 OC [PRIME-RTX5060-O8G]",
+    "precio": 549990,
+    "imagen_url": "/image/componente2.png",
+    "categoria": "hardware",
+    "tipo": "GPU",
+    "especificaciones": {
+      "fabricante": "ASUS",
+      "gpu": "NVIDIA GeForce RTX 5060",
+      "memoria": "8 GB GDDR7 (128 bit)",
+      "bus": "PCI Express 5.0 x8",
+      "frecuencias_core": "2280 / 2497 / 2595 MHz",
+      "nucleo": "NVIDIA Blackwell 2.0 GB206-250",
+      "refrigeracion": "Ventilador",
+      "largo": "268 mm",
+      "slots": "Dual slot",
+      "iluminacion": null,
+      "backplate": "Sí",
+      "conectores_de_poder": "1x 8 pines",
+      "puertos_de_video": "3x DisplayPort 2.1, 1x HDMI 2.1b"
+    }
+  },
+  {
+    "id": "msi-rtx-5070-ti-16g-gaming-trio-white",
+    "nombre": "MSI GeForce RTX 5070 Ti 16G GAMING TRIO OC WHITE [G507T-16GTCW]",
+    "precio": 1299990,
+    "imagen_url": "/image/componente3.png",
+    "categoria": "hardware",
+    "tipo": "GPU",
+    "especificaciones": {
+      "fabricante": "MSI",
+      "gpu": "NVIDIA GeForce RTX 5070 Ti",
+      "memoria": "16 GB GDDR7 (256 bit)",
+      "bus": "PCI Express 5.0 x16",
+      "frecuencias_core": "2300 / 2452 / 2580 MHz",
+      "nucleo": "NVIDIA Blackwell GB203-300",
+      "refrigeracion": "Ventilador",
+      "largo": "338 mm",
+      "slots": "Dual slot",
+      "iluminacion": "RGB Programable",
+      "backplate": "Sí",
+      "conectores_de_poder": "1x 16 pines (12VHPWR)",
+      "puertos_de_video": "3x DisplayPort 2.1, 1x HDMI 2.1"
+    }
+  },
+  {
+    "id": "amd-ryzen-7-9800x3d",
+    "nombre": "AMD Ryzen 7 9800X3D [100-100001084WOF]",
+    "precio": 449990,
+    "imagen_url": "/image/componente4.png",
+    "categoria": "hardware",
+    "tipo": "CPU",
+    "especificaciones": {
+      "frecuencia": "4700 MHz",
+      "frecuencia_turbo_maxima": "5200 MHz",
+      "nucleos_hilos": "8 núcleos / 16 hilos",
+      "cache": "8 x 1MB L2 / 96MB L3",
+      "socket": "AM5",
+      "nucleo": "AMD Granite Ridge (Zen 5)",
+      "proceso_de_manufactura": "4 nm",
+      "tdp": "120 W",
+      "cooler": "No posee",
+      "graficos_integrados": "No posee"
+    }
+  },
+  {
+    "id": "intel-core-i5-12400f",
+    "nombre": "Intel Core i5-12400F [BX8071512400F]",
+    "precio": 149990,
+    "imagen_url": "/image/componente5.png",
+    "categoria": "hardware",
+    "tipo": "CPU",
+    "especificaciones": {
+      "frecuencia": "2500 MHz",
+      "frecuencia_turbo_maxima": "4400 MHz",
+      "nucleos_hilos": "6 núcleos / 12 hilos",
+      "cache": "6 x 1280KB L2 / 18MB L3",
+      "socket": "LGA 1700",
+      "nucleo": "Intel Alder Lake S (Alder Lake)",
+      "proceso_de_manufactura": "10 nm",
+      "tdp": "65 W",
+      "cooler": "Cooler stock Intel",
+      "graficos_integrados": "No posee"
+    }
+  },
+  {
+    "id": "kingston-fury-beast-rgb-32gb-ddr5-6000",
+    "nombre": "Kingston Fury Beast RGB KF560C30BBAK2-32 (2 x 16 GB | DIMM DDR5-6000)",
+    "precio": 139990,
+    "imagen_url": "/image/componente6.png",
+    "categoria": "hardware",
+    "tipo": "RAM",
+    "especificaciones": {
+      "capacidad": "2 x 16 GB",
+      "tipo": "DDR5",
+      "velocidad": "6000 MT/s",
+      "formato": "DIMM",
+      "voltaje": "1.35 V",
+      "latencia_cl": 30,
+      "latencia_trcd": 36,
+      "latencia_trp": 36,
+      "latencia_tras": 36,
+      "soporte_ecc": "No",
+      "soporte_full_buffered": "No"
+    }
+  }
+]
