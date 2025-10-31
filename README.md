@@ -63,38 +63,3 @@ bun run dev
 ```
 1. Acceder al Sitio
 Abre tu navegador y ve a http://localhost:4321 para ver el proyecto en acción.
-
-
-
-
-📂 Estructura del Proyecto
-/
-├── public/                 # Imágenes estáticas, logos y fuentes
-│   └── images/
-├── src/
-│   ├── components/         # Componentes reutilizables (.astro)
-│   │   ├── Header.astro
-│   │   ├── Footer.astro
-│   │   ├── ProductCard.astro
-│   │   ├── NewsCard.astro
-│   │   └── CustomCarousel.astro
-│   ├── data/                 # Datos de la aplicación
-│   │   ├── telefonos.json
-│   │   ├── hardware.json
-│   │   └── blogPosts.json
-│   ├── layouts/              # Plantilla principal
-│   │   └── Layout.astro
-│   └── pages/                # Todas las páginas y rutas del sitio
-│       ├── telefonos/
-│       │   └── [id].astro    # Plantilla de detalle de teléfono
-│       ├── hardware/
-│       │   └── [id].astro    # Plantilla de detalle de hardware
-│       ├── perifericos/
-│       │   └── [id].astro    # Plantilla de detalle de periférico
-│       ├── notebooks/
-│       │   └── [id].astro    # Plantilla de detalle de notebook
-│       ├── blogs/
-│       ├── index.astro       # Página de inicio
-│       ├── blog.astro        # Grilla de todos los posts
-│       └── nosotros.astro    # Página "Sobre Nosotros"
-└── package.json            # Dependencias del proyecto
