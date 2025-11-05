@@ -8,19 +8,6 @@
 * **Gestión de Datos:** Archivos JSON locales (`.json`)
 * **Despliegue:** (Optimizado para despliegue estático en plataformas como Vercel, Netlify o GitHub Pages)
 
----
-
-## ✨ Características Principales
-
-* **Diseño 100% Responsivo:** Adaptable a móviles, tablets (breakpoint `lg`) y escritorio.
-* **Header y Footer Componentizados:** Incluye un menú de hamburguesa para funcionar en dispositivos móviles.
-* **Páginas de Categoría:** Grillas de productos (`Celulares`, `Hardware`, `Periféricos`, `Notebooks`) que leen los datos desde archivos `.json`.
-* **Páginas de Detalle Dinámicas:** Rutas generadas estáticamente (usando `getStaticPaths`) para cada producto (ej: `/telefonos/[id]`).
-* **Sección de Blog:** Un sistema de blog manual donde cada artículo es una página `.astro` (`src/pages/blogs/`) y la grilla principal se alimenta de un `blogPosts.json`.
-* **Carruseles de Productos:** Componente de carrusel en la página de inicio para mostrar productos destacados, con navegación por flechas (impulsado por JavaScript del lado del cliente).
-* **Páginas Estáticas:** Secciones de "Sobre Nosotros" (`/nosotros`) y "Contacto" (`/contacto`).
-
----
 
 ## 🏁 Cómo Empezar
 
