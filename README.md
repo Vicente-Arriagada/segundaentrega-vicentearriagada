@@ -6,7 +6,7 @@
 * **Estilos:** [Tailwind CSS](https://tailwindcss.com/)
 * **Runtime / Gestor de Paquetes:** [Bun](https://bun.sh/)
 * **Gestión de Datos:** Archivos JSON locales (`.json`)
-* **Despliegue:** (Optimizado para despliegue estático en plataformas como Vercel, Netlify o GitHub Pages)
+
 
 
 
