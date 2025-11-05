@@ -9,9 +9,6 @@
 * **Despliegue:** (Optimizado para despliegue estático en plataformas como Vercel, Netlify o GitHub Pages)
 
 
-## 🏁 Cómo Empezar
-
-Sigue estos pasos para levantar el proyecto en tu máquina local.
 
 ### 1. Prerrequisitos
 
