@@ -63,6 +63,7 @@ bun run dev
 ```
 1. Acceder al Sitio
 Abre tu navegador y ve a http://localhost:4321 para ver el proyecto en acción.
+<<<<<<< HEAD
 
 
 
@@ -98,3 +99,5 @@ Abre tu navegador y ve a http://localhost:4321 para ver el proyecto en acción.
 │       ├── blog.astro        # Grilla de todos los posts
 │       └── nosotros.astro    # Página "Sobre Nosotros"
 └── package.json            # Dependencias del proyecto
+=======
+>>>>>>> a0f3a4105e393936e6f058918c94e7374411aeed
