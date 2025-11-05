@@ -35,25 +35,90 @@ const { productos, titulo } = Astro.props;
 </section>
 
 
-<script client:load> // Funcion para carrusel 
-  
+<script client:load> // Funcion para carrusel
 
-  const container = document.getElementById("carousel-container");
-  const prevBtn = document.getElementById("prev-btn");
-  const nextBtn = document.getElementById("next-btn");
+  document.addEventListener("DOMContentLoaded", () => {
 
-  if (container && prevBtn && nextBtn) {
+   
+
+    const carousels = document.querySelectorAll(".relative");
 
 
-    nextBtn.addEventListener("click", () => {
-      container.scrollLeft += container.clientWidth;
+
+    carousels.forEach(carousel => {
+
+      const container = carousel.querySelector("#carousel-container");
+
+      const prevBtn = carousel.querySelector("#prev-btn");
+
+      const nextBtn = carousel.querySelector("#next-btn");
+
+
+
+      if (!container || !prevBtn || !nextBtn) return;
+
+
+
+      function updateButtons() {
+
+       
+
+        if (window.innerWidth < 768) {
+
+          prevBtn.disabled = true;
+
+          nextBtn.disabled = true;
+
+          return;
+
+        }
+
+
+
+        const atStart = container.scrollLeft === 0;
+
+        const atEnd = container.scrollLeft + container.clientWidth >= container.scrollWidth - 5;
+
+       
+
+        prevBtn.disabled = atStart;
+
+        nextBtn.disabled = atEnd;
+
+      }
+
+
+
+      nextBtn.addEventListener("click", () => {
+
+        const cardWidth = container.querySelector("div").clientWidth;
+
+        container.scrollLeft += cardWidth + 16;
+
+      });
+
+
+
+      prevBtn.addEventListener("click", () => {
+
+        const cardWidth = container.querySelector("div").clientWidth;
+
+        container.scrollLeft -= cardWidth + 16;
+
+      });
+
+
+
+      container.addEventListener("scroll", updateButtons, { passive: true });
+
+      updateButtons();
+
+      window.addEventListener("resize", updateButtons, { passive: true });
+
     });
 
- 
-    prevBtn.addEventListener("click", () => {
-      container.scrollLeft -= container.clientWidth;
-    });
-  }
+  });
+
 </script>
 
 <style is:global>
