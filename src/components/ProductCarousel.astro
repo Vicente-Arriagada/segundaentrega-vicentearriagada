@@ -35,48 +35,25 @@ const { productos, titulo } = Astro.props;
 </section>
 
 
-<script client:load> // Funcion para carrusel
-  document.addEventListener("DOMContentLoaded", () => {
-    
-    const carousels = document.querySelectorAll(".relative");
+<script client:load> // Funcion para carrusel 
+  
 
-    carousels.forEach(carousel => {
-      const container = carousel.querySelector("#carousel-container");
-      const prevBtn = carousel.querySelector("#prev-btn");
-      const nextBtn = carousel.querySelector("#next-btn");
+  const container = document.getElementById("carousel-container");
+  const prevBtn = document.getElementById("prev-btn");
+  const nextBtn = document.getElementById("next-btn");
 
-      if (!container || !prevBtn || !nextBtn) return;
+  if (container && prevBtn && nextBtn) {
 
-      function updateButtons() {
-       
-        if (window.innerWidth < 768) { 
-          prevBtn.disabled = true;
-          nextBtn.disabled = true;
-          return;
-        }
 
-        const atStart = container.scrollLeft === 0;
-        const atEnd = container.scrollLeft + container.clientWidth >= container.scrollWidth - 5;
-        
-        prevBtn.disabled = atStart;
-        nextBtn.disabled = atEnd;
-      }
-
-      nextBtn.addEventListener("click", () => {
-        const cardWidth = container.querySelector("div").clientWidth;
-        container.scrollLeft += cardWidth + 16;
-      });
-
-      prevBtn.addEventListener("click", () => {
-        const cardWidth = container.querySelector("div").clientWidth;
-        container.scrollLeft -= cardWidth + 16;
-      });
-
-      container.addEventListener("scroll", updateButtons, { passive: true });
-      updateButtons();
-      window.addEventListener("resize", updateButtons, { passive: true });
+    nextBtn.addEventListener("click", () => {
+      container.scrollLeft += container.clientWidth;
     });
-  });
+
+ 
+    prevBtn.addEventListener("click", () => {
+      container.scrollLeft -= container.clientWidth;
+    });
+  }
 </script>
 
 <style is:global>
