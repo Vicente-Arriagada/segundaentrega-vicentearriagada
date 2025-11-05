@@ -38,87 +38,44 @@ const { productos, titulo } = Astro.props;
 <script client:load> // Funcion para carrusel
 
   document.addEventListener("DOMContentLoaded", () => {
-
-   
-
     const carousels = document.querySelectorAll(".relative");
-
-
-
     carousels.forEach(carousel => {
-
       const container = carousel.querySelector("#carousel-container");
 
       const prevBtn = carousel.querySelector("#prev-btn");
 
       const nextBtn = carousel.querySelector("#next-btn");
 
-
-
       if (!container || !prevBtn || !nextBtn) return;
 
-
-
       function updateButtons() {
-
-       
-
         if (window.innerWidth < 768) {
 
           prevBtn.disabled = true;
-
           nextBtn.disabled = true;
-
           return;
-
         }
-
-
-
         const atStart = container.scrollLeft === 0;
-
         const atEnd = container.scrollLeft + container.clientWidth >= container.scrollWidth - 5;
-
-       
-
         prevBtn.disabled = atStart;
-
         nextBtn.disabled = atEnd;
-
       }
-
-
-
       nextBtn.addEventListener("click", () => {
 
         const cardWidth = container.querySelector("div").clientWidth;
-
         container.scrollLeft += cardWidth + 16;
-
       });
-
-
 
       prevBtn.addEventListener("click", () => {
-
         const cardWidth = container.querySelector("div").clientWidth;
-
         container.scrollLeft -= cardWidth + 16;
-
       });
 
-
-
       container.addEventListener("scroll", updateButtons, { passive: true });
-
       updateButtons();
-
       window.addEventListener("resize", updateButtons, { passive: true });
-
     });
-
   });
-
 </script>
 
 <style is:global>
